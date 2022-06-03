@@ -10,7 +10,7 @@ c.short_name as Country_Name_Short,
 b.Latitude as Country_Latitude,
 b.Longitude as Country_Longitude,
 c.currency_unit as Country_Currency,
-c.long_name as Country_Long_Name,
+c.long_name as Country_Name_Long,
 c.region as Country_Region,
 c.Income_group as Country_Income_Group,
 Customer_Type,
@@ -48,31 +48,31 @@ Stays_In_Week_Nights,
 (stays_in_weekend_nights + stays_in_week_nights) as total_roomnights,
 Lead_Time,
 case when lead_time=0 then 0
-when lead_time between 1 and 99 then "1-99"
-when lead_time between 100 and 199 then "100-199"
-when lead_time between 200 and 299 then "200-299"
-when lead_time between 300 and 399 then "300-399"
-when lead_time between 400 and 499 then "400-499"
-when lead_time between 500 and 599 then "500-599"
-when lead_time between 600 and 699 then "600-699"
-when lead_time between 700 and 799 then "700-799"
-else null end as lead_time_bins,
+when lead_time between 1 and 99 then "1 to 99"
+when lead_time between 100 and 199 then "100 to 199"
+when lead_time between 200 and 299 then "200 to 299"
+when lead_time between 300 and 399 then "300 to 399"
+when lead_time between 400 and 499 then "400 to 499"
+when lead_time between 500 and 599 then "500 to 599"
+when lead_time between 600 and 699 then "600 to 699"
+when lead_time between 700 and 799 then "700 to 799"
+else null end as lead_time_bin,
 Days_In_Waiting_List,
 Total_Of_Special_Requests,
 ADR,
 case when adr=0 then 0
-when adr between .001 and 49.99 then "1-49"
-when adr between 50 and 99.99 then "50-99"
-when adr between 100 and 149.99 then "100-149"
-when adr between 150 and 199.99 then "150-199"
-when adr between 200 and 249.99 then "200-249"
-when adr between 250 and 299.99 then "250-299"
-when adr between 300 and 349.99 then "300-349"
-when adr between 350 and 399.99 then "350-399"
-when adr between 400 and 449.99 then "400-449"
-when adr between 450 and 499.99 then "450-499"
-when adr > 500 then "500+"
-else null end as adr_adj,
+when adr between .001 and 49.99 then "$1 to $49"
+when adr between 50 and 99.99 then "$50 to $99"
+when adr between 100 and 149.99 then "$100 to $149"
+when adr between 150 and 199.99 then "$150 to $199"
+when adr between 200 and 249.99 then "$200 to $249"
+when adr between 250 and 299.99 then "$250 to $299"
+when adr between 300 and 349.99 then "$300 to $349"
+when adr between 350 and 399.99 then "$350 to $399"
+when adr between 400 and 449.99 then "$400 to $449"
+when adr between 450 and 499.99 then "$450 to $499"
+when adr > 500 then "$500+"
+else null end as adr_bin,
 Adults,
 Children,
 Babies,
