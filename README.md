@@ -5,6 +5,7 @@ Welcome to my analytics portfolio! I have a unique take on predictive analytics 
 The software can be downloaded at the following: 
 
 https://orangedatamining.com/download/#windows
+
 https://jasp-stats.org/download/
 
 Each project can be found in a specific folder:
