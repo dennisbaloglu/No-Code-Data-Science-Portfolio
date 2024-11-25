@@ -1,4 +1,4 @@
-# Data-Science-Portfolio
+# No-Code-Data-Science-Portfolio
 
 Welcome to my analytics portfolio! I have a unique take on predictive analytics as I use no-code software that runs popular analytics tools in the backend of them. For instance, Orange uses Python and JASP uses R. 
 
